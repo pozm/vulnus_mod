@@ -30,8 +30,11 @@ namespace vulnus_mod.patches
                 .GetValue(__instance);
             var AT = (float) typeof(MapPlayer).GetField("AT", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);
             var AD = (float) typeof(MapPlayer).GetField("AD", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);
-            var colors = (Color[]) typeof(MapPlayer).GetField("colors", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);
-            Console.WriteLine($"poggers; {AT} & {AD}");
+            // var colors = (Color[]) typeof(MapPlayer).GetField("colors", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);
+            // Console.WriteLine($"poggers; {AT} & {AD}");
+            
+            if (!Settings.EnableGhost) return;
+            
             foreach (var notes in notesMap)
             {
                 try
@@ -42,8 +45,8 @@ namespace vulnus_mod.patches
                     // var color = meshRenderMaterial.color;
                     // color.a = offset2;
                     var c = notes.Value.transform.Find("Mesh").GetComponent<MeshRenderer>().material.color;
-                    var calc = Math.Max((offset2) - 5,0);
-                    if (calc > 60) continue;
+                    var calc = Math.Max((offset2) - AD/4,0);
+                    if (calc > 50) continue;
                     c.a = Math.Min((calc / 10),1);
                     notes.Value.transform.Find("Mesh").GetComponent<MeshRenderer>().material.color = c;
                     // Console.WriteLine($"offset2 | {c.a}");
