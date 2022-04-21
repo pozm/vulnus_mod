@@ -4,6 +4,7 @@
 - Download from release
 - Extract anywhere
 - [Install dotnet 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.4-windows-x64-installer)
+- open vulnus
 - run Injector.exe
 ## how to stop using
 alt + f4
