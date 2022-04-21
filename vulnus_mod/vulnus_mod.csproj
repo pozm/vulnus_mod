@@ -135,6 +135,18 @@
         <Reference Include="UnityEngine.CoreModule">
           <HintPath>..\..\..\..\..\..\app\Vulnus_Beta_Win\Vulnus_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>..\..\..\..\..\..\app\Vulnus_Beta_Win\Vulnus_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>..\..\..\..\..\..\app\Vulnus_Beta_Win\Vulnus_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule">
+          <HintPath>..\..\..\..\..\..\app\Vulnus_Beta_Win\Vulnus_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\..\..\..\..\app\Vulnus_Beta_Win\Vulnus_Data\Managed\UnityEngine.UI.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Loader.cs" />
@@ -142,6 +154,7 @@
         <Compile Include="patches\OnPlay.cs" />
         <Compile Include="patches\Patcher.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Settings.cs" />
         <Compile Include="Utils.cs" />
     </ItemGroup>
     <ItemGroup>

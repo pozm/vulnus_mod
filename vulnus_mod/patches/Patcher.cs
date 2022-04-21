@@ -9,8 +9,8 @@ namespace vulnus_mod.patches
         public static void Patch()
         {
                 
-            harm = new Harmony("luna.cheat.vulnus");
-            Console.WriteLine("Created harmony");
+            harm = new Harmony("luna.mod.vulnus");
+            Console.WriteLine("Applied Harmony patches [luna.mod.vulnus].");
 
                 
             harm.PatchAll(typeof(OnPlay).Assembly);
